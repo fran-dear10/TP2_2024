@@ -15,6 +15,8 @@
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Roboto",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
+  --hero-font: "Chivo Black",  sans-serif;
+  --title-font: "DM Sans Black",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -28,7 +30,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.55);  /* The default color of the main navmenu links */
+  --nav-color: rgba(0, 0, 0, 0.76);  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -76,7 +78,7 @@ h6 {
 .header {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: #000000;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
@@ -94,6 +96,7 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
+  font-family: var(--title-font);
 }
 
 .header .logo span {
@@ -110,10 +113,14 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #DDCFAC;
+  --background-color: #469BC7;
   --heading-color: #3c3c3c;
-  --nav-color: #3c3c3c;
+  --nav-color: #ffffff;
   --nav-hover-color: #3c3c3c;
+}
+
+.scrolled .header .logo h1 {
+  color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -703,7 +710,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   --default-color: #000000;
-  --background-color: #00000050;
+  --background-color: #f1ebdf00;
   --heading-color: #1f1f1f;
   width: 100%;
   min-height: 100vh;
@@ -713,6 +720,7 @@ section,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  font-family: var(--heading-font);
 }
 
 .hero .info {
@@ -735,6 +743,7 @@ section,
   font-size: 56px;
   font-weight: 700;
   position: relative;
+  font-family: var(--hero-font);
 }
 
 .hero .info h2:after {
@@ -762,7 +771,7 @@ section,
 }
 
 .hero .info .btn-get-started {
-  color: var(--contrast-color);
+  color: #469BC7;
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -777,6 +786,7 @@ section,
 
 .hero .info .btn-get-started:hover {
   background: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 .hero .carousel {
@@ -1009,15 +1019,16 @@ section,
 # Constructions Section
 --------------------------------------------------------------*/
 .constructions {
-  background: url("../img/bck_4.jpg");
+  background: url("../img/bck_3.jpg");
   background-repeat: no-repeat;
 }
 
 
 .constructions .card-item {
-  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 0%);
+  background-color: #ffffff;
+  border: 4px solid color-mix(in srgb, var(--accent-color), transparent 0%);
   position: relative;
-  border-radius: 50px;
+  border-radius: 50px 0 50px 0;
 }
 
 .constructions .card-item .card-bg {
@@ -1034,7 +1045,7 @@ section,
   object-fit: cover;
   object-position: center;
   z-index: 1;
-  border-radius: 47px;
+  border-radius: 45px 0 0 0;
 }
 
 .constructions .card-item .card-body {
@@ -1062,9 +1073,9 @@ section,
 .services .service-item {
   padding: 40px;
   box-shadow: 0px 0 30px color-mix(in srgb, var(--accent-color), transparent 30%);
-  background-color: #F1EBDF;
+  background-color: #ffffff;
   height: 100%;
-  border-radius: 50px;
+  border-radius: 50px 0 50px 0;
 }
 
 .services .service-item .icon {
@@ -1354,10 +1365,10 @@ section,
 }
 
 .projects .portfolio-content {
-  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 0%);
+  border: 5px solid color-mix(in srgb, var(--accent-color), transparent 0%);
   position: relative;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 30px 0 30px 0;
 }
 
 .projects .portfolio-content img {
@@ -1439,13 +1450,14 @@ section,
 }
 
 .testimonials .testimonial-item {
+  background-color: #ffffff;
   box-shadow: 0px 2px 15px color-mix(in srgb, var(--accent-color), transparent 60%);
   box-sizing: content-box;
   padding: 30px 30px 30px 60px;
   margin: 30px 15px;
   min-height: 200px;
   position: relative;
-  border-radius: 50px;
+  border-radius: 50px 0 50px 0;
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -1550,9 +1562,10 @@ section,
 # Recent Blog Posts Section
 --------------------------------------------------------------*/
 .recent-blog-posts .post-item {
+  background-color: #ffffff;
   box-shadow: 0px 2px 20px color-mix(in srgb, var(--accent-color), transparent 62%);
   transition: 0.3s;
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px;
 }
 
 .recent-blog-posts .post-item .post-img img {
@@ -1730,9 +1743,10 @@ section,
 # Stats Counter Section
 --------------------------------------------------------------*/
 .stats-counter .stats-item {
+  background-color: #ffffff;
   box-shadow: 0px 0 30px color-mix(in srgb, var(--accent-color), transparent 62%);
   padding: 30px;
-  border-radius: 50px;
+  border-radius: 50px 0 50px 0;
 }
 
 .stats-counter .stats-item i {
@@ -1864,7 +1878,7 @@ section,
 
 .team .member .member-img {
   margin: 0 80px;
-  border-radius: 50%;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
 }
